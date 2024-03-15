@@ -1,0 +1,42 @@
+[
+  {
+    "location": {
+      "x": 48.8566,
+      "y": 2.3522
+    },
+    "title": "Paris",
+    "population": 2148000
+  },
+  {
+    "location": {
+      "x": 51.5074,
+      "y": -0.1278
+    },
+    "title": "London",
+    "population": 8982000
+  },
+  {
+    "location": {
+      "x": 41.9028,
+      "y": 12.4964
+    },
+    "title": "Rome",
+    "population": 2873000
+  },
+  {
+    "location": {
+      "x": 35.6895,
+      "y": 139.6917
+    },
+    "title": "Tokyo",
+    "population": 13960000
+  },
+  {
+    "location": {
+      "x": 40.7128,
+      "y": -74.006
+    },
+    "title": "New York",
+    "population": 8337000
+  }
+]

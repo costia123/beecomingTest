@@ -1,0 +1,8 @@
+<router-outlet>
+  <main class="main">
+    <ng-container *ngFor="let item of data; let i = index" class="formData">
+      <p class="DataTitle">{{ data[i].title }}</p>
+      <input type="number" [(ngModel)]="data[i].population" class="inputData" (change)="changeData($event, i)" />
+    </ng-container>
+  </main>
+</router-outlet>

@@ -1,0 +1,28 @@
+main {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: inherit;
+  position: relative;
+  flex-direction: column;
+  padding: 15px;
+}
+.formData {
+  display: flex;
+}
+.DataTitle {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: x-large;
+}
+.inputData {
+  border: 1px solid rgb(78, 40, 248);
+  height: 35px;
+  border-radius: 5px;
+  padding: 5px;
+}
+.inputData::selection{
+  border: 1px solid rgb(40, 113, 248) !important;
+}
