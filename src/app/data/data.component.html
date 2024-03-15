@@ -1,8 +1,81 @@
 <router-outlet>
   <main class="main">
-    <ng-container *ngFor="let item of data; let i = index" class="formData">
-      <p class="DataTitle">{{ data[i].title }}</p>
-      <input type="number" [(ngModel)]="data[i].population" class="inputData" (change)="changeData($event, i)" />
-    </ng-container>
+    <button class="addDataBtn" (click)="openForm()">Add</button>
+    <div *ngIf="showForm" class="newDataForm">
+      <form (ngSubmit)="saveCapital()" class="newDataIFrom">
+        <p>Ajouter une capitale</p>
+        <input
+          class="inputNewData"
+          type="text"
+          [ngModelOptions]="{ standalone: true }"
+          [(ngModel)]="newCapital.title"
+          placeholder="Nom de la capitale"
+        />
+        <input
+          class="inputNewData"
+          type="text"
+          [(ngModel)]="newCapital.country"
+          [ngModelOptions]="{ standalone: true }"
+          placeholder="Nom du pays"
+        />
+        <input
+          class="inputNewData"
+          type="number"
+          [ngModelOptions]="{ standalone: true }"
+          [(ngModel)]="newCapital.location.x"
+          placeholder="Latitude"
+        />
+        <input
+          class="inputNewData"
+          type="number"
+          [ngModelOptions]="{ standalone: true }"
+          [(ngModel)]="newCapital.location.y"
+          placeholder="Longitude"
+        />
+        <input
+          class="inputNewData"
+          type="number"
+          [ngModelOptions]="{ standalone: true }"
+          [(ngModel)]="newCapital.population"
+          placeholder="Nombre d'habitants"
+        />
+        <button type="submit" class="saveBtn">Sauvegarder</button>
+      </form>
+    </div>
+    <div class="dataGrid">
+      <ng-container *ngFor="let item of data; let i = index" class="formData">
+        <div>
+          <p class="DataTitle">{{ data[i].title }}</p>
+          <p>Pays</p>
+          <input
+            type="text"
+            [(ngModel)]="data[i].country"
+            class="inputData"
+            (change)="changeData($event, i, 'country')"
+          />
+          <p>Population</p>
+          <input
+            type="number"
+            [(ngModel)]="data[i].population"
+            class="inputData"
+            (change)="changeData($event, i, 'population')"
+          />
+          <p>latitude</p>
+          <input
+            type="number"
+            [(ngModel)]="data[i].location.x"
+            class="inputData"
+            (change)="changeData($event, i, 'locationX')"
+          />
+          <p>longitude</p>
+          <input
+            type="number"
+            [(ngModel)]="data[i].location.y"
+            class="inputData"
+            (change)="changeData($event, i, 'locationY')"
+          />
+        </div>
+      </ng-container>
+    </div>
   </main>
 </router-outlet>

@@ -5,6 +5,7 @@
       "y": 2.3522
     },
     "title": "Paris",
+    "country": "France",
     "population": 2148000
   },
   {
@@ -13,6 +14,7 @@
       "y": -0.1278
     },
     "title": "London",
+    "country": "United Kingdom",
     "population": 8982000
   },
   {
@@ -21,6 +23,7 @@
       "y": 12.4964
     },
     "title": "Rome",
+    "country": "Italy",
     "population": 2873000
   },
   {
@@ -29,6 +32,7 @@
       "y": 139.6917
     },
     "title": "Tokyo",
+    "country": "Japan",
     "population": 13960000
   },
   {
@@ -37,6 +41,7 @@
       "y": -74.006
     },
     "title": "New York",
+    "country": "United States",
     "population": 8337000
   }
 ]
